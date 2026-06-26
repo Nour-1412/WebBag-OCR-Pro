@@ -132,6 +132,87 @@ if(file){
 
 showPreview(file);
 
+}/* ==========================================
+OCR Engine - Part 2
+========================================== */
+
+extractBtn.addEventListener("click", async () => {
+
+if (!selectedImage) {
+
+alert("الرجاء اختيار صورة أولاً.");
+
+return;
+
 }
+
+progressSection.style.display = "block";
+
+progressFill.style.width = "0%";
+
+progressText.textContent = "0%";
+
+result.value = "";
+
+try {
+
+const {
+data: { text }
+
+} = await Tesseract.recognize(
+
+selectedImage,
+
+language.value,
+
+{
+
+logger: (m) => {
+
+if (m.status === "recognizing text") {
+
+const percent = Math.round(m.progress * 100);
+
+progressFill.style.width = percent + "%
+/* ==========================================
+Tools - Part 3
+========================================== */
+
+// =========================
+// Copy Text
+// =========================
+
+copyBtn.addEventListener("click", async () => {
+
+if (!result.value.trim()) return;
+
+try{
+
+await navigator.clipboard.writeText(result.value);
+
+copyBtn.textContent = "✅ تم النسخ";
+
+setTimeout(()=>{
+
+copyBtn.textContent="نسخ";
+
+},1500);
+
+}catch(err){
+
+alert("تعذر نسخ النص.");
+
+}
+
+});
+
+// =========================
+// Download TXT
+// =========================
+
+downloadBtn.addEventListener("click", () => {
+
+if (!
+
 
 });
