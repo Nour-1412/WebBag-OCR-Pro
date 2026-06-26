@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 
 <html lang="ar" dir="rtl">
-
 <head>
 
 <meta charset="UTF-8">
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>استخراج النص من الصور (OCR) | WebBag</title>
+<title>WebBag OCR Pro | استخراج النص من الصور</title>
 
-<meta name="description" content="استخرج النص من الصور مجانًا باستخدام تقنية OCR مع دعم العربية والإنجليزية. لا حاجة لتثبيت أي برنامج، وكل المعالجة تتم داخل المتصفح.">
+<meta name="description" content="أداة مجانية لاستخراج النصوص من الصور باستخدام تقنية OCR مع دعم العربية والإنجليزية.">
 
-<meta name="keywords" content="OCR, استخراج النص من الصور, Image to Text, OCR Arabic, OCR English, WebBag">
+<meta name="keywords" content="OCR, Image to Text, استخراج النص من الصور, WebBag">
 
 <meta name="author" content="WebBag">
 
 <meta name="robots" content="index,follow">
 
-<meta name="theme-color" content="#2563EB">
-
-<meta property="og:title" content="WebBag OCR Pro">
-
-<meta property="og:description" content="استخرج النص من الصور أونلاين بسرعة ودقة مع دعم العربية والإنجليزية.">
-
-<meta property="og:type" content="website">
-
-<meta property="og:locale" content="ar_AR">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
@@ -46,5 +31,149 @@
 
 <header class="header">
 
-<div class="
+<div class="container">
 
+<div class="logo">
+
+<h2>🔷 WebBag</h2>
+
+<span>OCR Pro</span>
+
+</div>
+
+<button id="themeToggle" class="theme-btn" aria-label="الوضع الليلي">
+
+🌙
+
+</button>
+
+</div>
+
+</header>
+
+<main class="container">
+<section class="tool-card">
+
+<h1>استخراج النص من الصور (OCR)</h1>
+
+<p class="tool-description">
+حوّل أي صورة إلى نص قابل للنسخ باستخدام تقنية OCR مع دعم اللغة العربية والإنجليزية.
+</p>
+
+<div id="dropArea" class="drop-area">
+
+<input
+type="file"
+id="imageInput"
+accept="image/*"
+hidden>
+
+<div class="upload-icon">📂</div>
+
+<h3>اسحب الصورة هنا</h3>
+
+<p>أو اضغط لاختيار صورة من جهازك</p>
+
+<button id="selectImageBtn" class="primary-btn">
+
+اختيار صورة
+
+</button>
+
+</div>
+
+<div id="preview" class="preview">
+
+<p>ستظهر معاينة الصورة هنا</p>
+
+</div>
+
+<div class="options">
+
+<label for="language">
+
+لغة التعرف
+
+</label>
+
+<select id="language">
+
+<option value="ara">العربية</option>
+
+<option value="eng">English</option>
+
+<option value="ara+eng">العربية + English</option>
+
+</select>
+
+</div>
+
+<button id="extractBtn" class="extract-btn">
+
+استخراج النص
+
+</button>
+
+<div id="progressSection" class="progress-section">
+
+<div class="progress-bar">
+
+<div id="progressFill"></div>
+
+</div>
+
+<p id="progressText">0%</p>
+
+</div>
+
+<textarea
+id="result"
+placeholder="سيظهر النص المستخرج هنا..."
+rows="10"></textarea>
+
+<div class="actions">
+
+<button id="copyBtn">
+
+نسخ
+
+</button>
+
+<button id="downloadBtn">
+
+تنزيل TXT
+
+</button>
+
+<button id="clearBtn">
+
+مسح
+
+</button>
+
+</div>
+
+</section>
+<footer class="footer">
+
+<p>
+
+© 2026 WebBag — جميع الحقوق محفوظة.
+
+</p>
+
+<p>
+
+تم تطوير الأداة لتعمل بالكامل داخل المتصفح مع الحفاظ على خصوصية المستخدم.
+
+</p>
+
+</footer>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
